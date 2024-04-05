@@ -1,11 +1,10 @@
 #!/bin/bash
 
 # Directorio donde se almacenarán los backups
-backup_dir="/ruta/del/directorio/de/backups"
+read -p "Indica quins fitxers vols emmagatzemar" backup_dir
 
 # Solicitar al usuario que ingrese la ruta del directorio a respaldar
-echo "Indica la ruta a respaldar:"
-read directory_to_backup
+read -p "Indica la ruta a respaldar:" directory_to_backup
 
 # Comprobar si el directorio de backups existe, si no, crearlo
 if [ ! -d "$backup_dir" ]; then
